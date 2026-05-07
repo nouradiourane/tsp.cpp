@@ -8,6 +8,11 @@ Il utilise l'algorithme d'optimisation locale **2-Opt** combiné à une approche
 - **Algorithme :** Génération de tours aléatoires et optimisation par décroisement d'arêtes (2-Opt).
 - **Gestion Mémoire :** Allocation dynamique optimisée pour de grandes instances.
 
+  ##  Langages et Outils
+- **Langage :** C++ (Standard 11/14)
+- **Bibliothèques :** STL (`fstream`, `cmath`, `algorithm`, `string`)
+- **Format de données :** Support des instances TSPLIB (EDGE_WEIGHT_SECTION et NODE_COORD_SECTION)
+
 ## Comment l'utiliser
 1. Compilez le code : `g++ -O3 main.cpp -o tsp_solver`
 2. Lancez l'exécutable : `./tsp_solver`
