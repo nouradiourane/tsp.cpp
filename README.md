@@ -20,3 +20,12 @@ Il utilise l'algorithme d'optimisation locale **2-Opt** combiné à une approche
 
 ## Résultats
 Le programme génère un fichier `.tour` compatible avec les outils de visualisation TSPLIB.
+
+## TSP Solver & Project Showcase
+---------------------------------------------------------
+
+tsp.html : Page d'accueil présentant le concept du TSP et les résultats obtenus.
+code.html : Une section dédiée à l'explication technique. Elle détaille le fonctionnement du code C++, les algorithmes utilisés et la logique de résolution.
+grp.html : Page de présentation de notre binôme, incluant nos rôles respectifs dans le projet.
+style.css : Fichier centralisant toute la mise en forme visuelle pour une expérience utilisateur fluide et cohérente.
+
