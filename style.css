@@ -1,0 +1,102 @@
+/* Style simple & funky — version classe */
+
+/* Reset */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: #f0f4f8; /* bleu très clair, calme */
+    color: #34495e; /* bleu foncé/gris */
+    line-height: 1.5;
+    padding: 40px 20px;
+    max-width: 850px;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    color: #2c3e50; /* bleu foncé */
+    text-shadow: 1.5px 1.5px #95a5a6; /* gris doux */
+    transform: rotate(-2deg);
+    display: inline-block;
+    margin-bottom: 10px;
+    user-select: none;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    padding: 10px 20px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: #bdc3c7a1; /* gris clair transparent */
+    box-shadow: 2px 2px 0 #95a5a611;
+    user-select: none;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: #34495e; /* bleu foncé */
+    color: white;
+    border-color: #7f8c8d; /* gris moyen */
+    box-shadow: 4px 4px 0 #7f8c8daa;
+    transform: translateY(-3px) rotate(1deg);
+  }
+  
+  /* Main */
+  main {
+    background: #ffffff; /* blanc */
+    padding: 30px 25px;
+    border-radius: 30px 10px 30px 10px;
+    box-shadow: 8px 8px 0 #7f8c8daa; /* gris moyen */
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #2c3e50; /* bleu foncé */
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #34495e; /* bleu foncé */
+    border-left: 8px solid #7f8c8d; /* gris moyen */
+    padding-left: 15px;
+    user-select: none;
+  }
+  
+  ul li {
+    margin-bottom: 12px;
+    list-style-type: "✦ ";
+    color: #7f8c8d; /* gris moyen */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 70px;
+    padding: 15px 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #7f8c8d; /* gris moyen */
+    user-select: none;
+  }
+  
