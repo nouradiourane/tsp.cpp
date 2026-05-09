@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Présentation du projet TSP</title>
+    <link rel="stylesheet" href="tsp.css">
+</head>
+<body>
+
+    <header>
+        <h1>Projet TSP - Groupe 1A</h1>
+        <nav>
+            <ul>
+                <li><a href="grp.html">Équipe</a></li>
+                <li><a href="sujet.html" class="active">Sujet</a></li>
+                <li><a href="code.html">travail</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Présentation du code - Voyageur de Commerce</h1>
+
+        <div class="section">
+            <h2>But du projet</h2>
+            <p>
+                Le but est de résoudre des instances du <strong>problème du voyageur de commerce (TSP)</strong> à partir de fichiers au format <code>.tsp</code> contenant les coordonnées ou distances entre les villes.
+                L'objectif est de trouver un chemin passant une seule fois par chaque ville et revenant à la ville de départ, tout en minimisant la distance totale.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Structure du programme</h2>
+            <p>Le programme est composé de plusieurs parties :</p>
+            <ul>
+                <li>Lecture du fichier TSP : extraction des coordonnées ou distances entre villes.</li>
+                <li>Génération d'une solution aléatoire : création d'un chemin aléatoire.</li>
+                <li>Optimisation par 2-Opt : amélioration du chemin par échange d'arêtes.</li>
+                <li>Comparaison et sauvegarde : on garde la meilleure solution trouvée parmi plusieurs essais.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Structures principales</h2>
+
+            <h3>1. DonneesTSP</h3>
+            <ul>
+                <li>Contient toutes les données de l'instance TSP (dimensions, distances, coordonnées, nom de l’instance, etc.).</li>
+            </ul>
+
+            <h3>2. Solution</h3>
+            <ul>
+                <li>Représente une solution avec un chemin (ordre des villes) et la distance totale.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Lecture et allocation des données</h2>
+            <p>
+                La fonction <strong>lireFichierTSP</strong> permet de lire un fichier <code>.tsp</code> et de remplir les structures en fonction du type d'information (soit des distances, soit des coordonnées à convertir en distances). 
+                Les fonctions <strong>initialiserDonnees</strong>, <strong>allouerMemoire</strong> et <strong>libererMemoire</strong> assurent une bonne gestion de la mémoire.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Génération d'une solution aléatoire</h2>
+            <p>
+                On utilise l'algorithme <strong>Fisher–Yates</strong> pour mélanger aléatoirement l'ordre des villes, via la fonction <strong>genererSolutionAleatoire</strong>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Calcul de la distance d'une solution</h2>
+            <p>
+                La fonction <strong>calculerDistance</strong> parcourt le chemin et additionne les distances entre chaque ville consécutive.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Optimisation locale avec 2-Opt</h2>
+            <p>
+                Le 2-Opt est une méthode d'amélioration qui consiste à inverser des sous-chemins si cela réduit la distance totale. Elle est implémentée dans la fonction <strong>optimisation2Opt</strong>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Exécution principale (<code>main</code>)</h2>
+            <p>Dans la fonction <code>main</code>, le programme :</p>
+            <ul>
+                <li>Lit les données depuis un fichier TSP (par exemple <code>bayg29.tsp</code> ou <code>att48.tsp</code>).</li>
+                <li>Réalise plusieurs essais (10 000 par défaut).</li>
+                <li>Pour chaque essai :</li>
+                <ul>
+                    <li>Génère une solution aléatoire.</li>
+                    <li>La corrige avec l'algorithme 2-Opt.</li>
+                    <li>Compare avec la meilleure solution trouvée jusqu'ici.</li>
+                </ul>
+                <li>Affiche et sauvegarde la meilleure solution dans un fichier <code>.tour</code>.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>
+                Ce projet met en œuvre des techniques classiques de résolution du TSP : génération aléatoire, amélioration par heuristique (2-Opt), et gestion mémoire dynamique. 
+                Le programme est générique et peut lire tout fichier TSP compatible TSPLIB.
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
